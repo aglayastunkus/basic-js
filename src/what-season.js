@@ -13,8 +13,9 @@ import {NotImplementedError} from '../extensions/index.js';
  */
 export default function getSeason(date) {
     if (typeof date === "undefined") return 'Unable to determine the time of year!';
-    try {
 
+    try {
+        JSON.stringify(date);
         if (date.getMonth() === 11 || (date.getMonth() >= 0 && date.getMonth() < 2 )) return 'winter'; else if
         (date.getMonth() > 1 && date.getMonth() < 5) return 'spring'; else if
         (date.getMonth() > 4 && date.getMonth() < 8) return 'summer'; else return 'fall';
